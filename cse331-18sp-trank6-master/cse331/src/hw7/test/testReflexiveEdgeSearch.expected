@@ -1,0 +1,42 @@
+# Test load graph eliminate reflexive node
+
+#Load graph
+loaded graph marveNodeReflexive
+
+# check graph load
+marveNodeReflexive contains: x y z
+the children of x in marveNodeReflexive are: y1.000
+the children of y in marveNodeReflexive are: x1.000 z1.000
+the children of z in marveNodeReflexive are: y1.000
+
+# Test Dijkstra's algorithm shortest path from x to z
+path from x to z:
+x to y with weight 1.000
+y to z with weight 1.000
+total cost: 2.000
+
+# Test Dijkstra's algorithm shortest path from z to x
+path from z to x:
+z to y with weight 1.000
+y to x with weight 1.000
+total cost: 2.000
+
+# Test Dijkstra's algorithm shortest path from x to y
+path from x to y:
+x to y with weight 1.000
+total cost: 1.000
+
+# Test Dijkstra's algorithm shortest path from y to x
+path from y to x:
+y to x with weight 1.000
+total cost: 1.000
+
+# Test Dijkstra's algorithm shortest path from y to z
+path from y to z:
+y to z with weight 1.000
+total cost: 1.000
+
+# Test Dijkstra's algorithm shortest path from z to y
+path from z to y:
+z to y with weight 1.000
+total cost: 1.000

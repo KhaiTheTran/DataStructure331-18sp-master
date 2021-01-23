@@ -1,0 +1,9 @@
+# Test unknown building
+# With the start and destination buildings are unknown
+# show Unknown building: [building name]
+# Running program
+r
+KFC
+Costco
+# Terminate program
+q

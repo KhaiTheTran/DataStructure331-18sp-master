@@ -1,0 +1,11 @@
+#One node test
+
+# Create a graph
+CreateGraph graphCreated_oneNode
+
+# Add a node
+AddNode graphCreated_oneNode xx
+
+# Print the nodes in the graph and the outgoing edges from xx
+ListNodes graphCreated_oneNode
+ListChildren graphCreated_oneNode xx

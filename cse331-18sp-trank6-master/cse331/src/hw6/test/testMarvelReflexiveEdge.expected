@@ -1,0 +1,36 @@
+# Test load graph eliminate reflexive node
+
+#Load graph
+loaded graph marveNodeReflexive
+
+# check graph load
+marveNodeReflexive contains: x y z
+the children of x in marveNodeReflexive are: y(xy)
+the children of y in marveNodeReflexive are: x(xy) z(xz)
+the children of z in marveNodeReflexive are: y(xz)
+
+# Test BFS shortest path from x to z
+path from x to z:
+x to y via xy
+y to z via xz
+
+# Test BFS shortest path from z to x
+path from z to x:
+z to y via xz
+y to x via xy
+
+# Test BFS shortest path from x to y
+path from x to y:
+x to y via xy
+
+# Test BFS shortest path from y to x
+path from y to x:
+y to x via xy
+
+# Test BFS shortest path from y to z
+path from y to z:
+y to z via xz
+
+# Test BFS shortest path from z to y
+path from z to y:
+z to y via xz

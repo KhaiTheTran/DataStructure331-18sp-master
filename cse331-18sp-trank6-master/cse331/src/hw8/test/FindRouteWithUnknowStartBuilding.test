@@ -1,0 +1,10 @@
+# Test Unknown Start Building
+# Print Unknown building: [building name]
+
+# Start program
+r
+QFC
+EEB
+
+# Terminate Program
+q

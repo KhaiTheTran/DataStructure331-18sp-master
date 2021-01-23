@@ -1,0 +1,12 @@
+Menu:
+r to find a route
+b to see a list of all buildings
+q to quit
+
+Enter an option ('m' to see the menu): # Test unknown building
+# With the start and destination buildings are unknown
+# show Unknown building: [building name]
+# Running program
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: KFC
+Unknown building: Costco
+Enter an option ('m' to see the menu): # Terminate program

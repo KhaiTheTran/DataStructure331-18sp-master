@@ -1,0 +1,11 @@
+#One node test
+
+# Create a graph
+created graph graphCreated_oneNode
+
+# Add a node
+added node xx to graphCreated_oneNode
+
+# Print the nodes in the graph and the outgoing edges from xx
+graphCreated_oneNode contains: xx
+the children of xx in graphCreated_oneNode are:

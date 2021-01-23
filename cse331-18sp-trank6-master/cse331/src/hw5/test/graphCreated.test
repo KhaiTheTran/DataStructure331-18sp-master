@@ -1,0 +1,7 @@
+# Tests initial graph.
+
+# Create a graph
+CreateGraph Creategraph
+
+# Print the nodes in the graph
+ListNodes Creategraph

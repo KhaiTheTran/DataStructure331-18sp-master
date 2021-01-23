@@ -1,0 +1,7 @@
+# Test Dijkstra's algorithm with an empty file
+
+loaded graph marvelNull
+
+marvelNull contains:
+
+unknown character node a and node b

@@ -1,0 +1,14 @@
+# Test graphCreated_twoNode
+
+# Create a graph
+CreateGraph graphCreated_twoNode
+
+# Add a node
+AddNode graphCreated_twoNode xx
+AddNode graphCreated_twoNode yy
+
+# Print the nodes in the graph and the outgoing edges from xx,
+# and outgoing node yy
+ListNodes graphCreated_twoNode
+ListChildren graphCreated_twoNode xx
+ListChildren graphCreated_twoNode yy

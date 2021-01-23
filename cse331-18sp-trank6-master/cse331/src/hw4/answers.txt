@@ -1,0 +1,105 @@
+CSE 331 Homework 4.  Answers to Written questions.
+Edit this file to supply your answers.
+
+Name:  <replace this with your name>
+
+Problem 0.
+
+(a) Write a pseudocode algorithm for multiplication:
+
+  r = p * q:
+    set x = 0 // x is polynomial
+	set r = 0 // r is polynomial
+	foreach term, t_p, in p:
+	    r = r + x:
+	                foreach term, t_x, in x:
+					if any term, t_r, in r has the same degree as t_x
+						then replace t_r in r with the sum of t_r and t_x
+						else insert t_x into r as a new term
+		all term, t_q, in q multiply with t_p,
+			then replace x with the multiply of t_p and all term, t_q, in q
+			
+(b) Write a pseudocode algorithm for division:
+  v != "0"
+  q = u/v:
+      set q = 0 // q is polynomial
+      set r = u by making a term-by-term copy of all terms in u to r
+      while r != 0 and highest degree, d_r, in r greater or equal to highest degree, d_v, in v:
+      	set x is the coefficient, t_r, in r divide the coefficient, t_v, in v
+      	set y is the highest degree, d_r, in r subtract the highest degree, d_v, in v
+      	set z is the polynomial highest degree y with the coefficient x
+      	set q = z + q
+      	set r = r - (z * v)
+
+(c) Illustrate your division algorithm running on this example: (x^3+x-1) / (x+1) = x^2-x+2
+  v = (x+1) != "0"
+  u = (x^3 + x - 1)
+  		set q = 0 // q is polynomial
+  		set r = copy of u =  (x^3 + x - 1)
+  		while r != 0 and highest degree, d_r = 3, in r greater or equal to highest degree, d_v = 1, in v: 
+  		    [r != 0 and highest degree, d_r = 3, in r greater or equal to highest degree, d_v = 1, in v]YES
+  			Iteration 1: r = (x^3 + x - 1), t_r = 1, t_v = 1, v = (x+1), q = 0
+  				[set x is the coefficient, t_r = 1, in r divide the coefficient, t_v = 1, in v] x = 1/1 = 1
+  				[set y is the highest degree, d_r = 3, in r subtract the highest degree, d_v = 1, in v] y = 3-1 = 2
+  				[set z is the polynomial highest degree y with the coefficient x] z = (1)x^2 = x^2
+  				[set q = z + q] q = x^2 + 0 = x^2
+  				[set r = r - (z * v)] r = (x^3 + x - 1) - (x^2 * (x+1)) = -x^2 + x - 1
+  			[r != 0 and highest degree, d_r = 2, in r greater or equal to highest degree, d_v = 1, in v]YES
+  			Iteration 2: r = -x^2 + x - 1, t_r = -1, t_v = 1, v = x+1, q = x^2
+  				[set x is the coefficient, t_r = -1, in r divide the coefficient, t_v = 1, in v] x -1/1 = -1
+  				[set y is the highest degree, d_r = 2, in r subtract the highest degree, d_v = 1, in v] y = 2-1 = 1
+  				[set z is the polynomial highest degree y with the coefficient x] z = (-1)x = -x
+  				[set q = z + q] q = -x + x^2 = x^2 -x
+  				[set r = r - (z * v)] r = (-x^2 + x - 1) - (-x*(x+1) = 2x -1
+  			[r != 0 and highest degree, d_r = 1, in r greater or equal to highest degree, d_v = 1, in v] YES
+  			Iteration 3: r = 2x - 1, t_r = 2, t_v = 1, v = x + 1, q = x^2 -x
+  				[set x is the coefficient, t_r = 2, in r divide the coefficient, t_v = 1, in v] x = 2/1 = 2
+  				[set y is the highest degree, d_r = 1, in r subtract the highest degree, d_v = 1, in v] y = 1-1 = 0
+  				[set z is the polynomial highest degree y with the coefficient x] z = (2)x^0 = 2
+  				[set q = z + q] q = 2 + x^2 - x = x^2 -x + 2 
+  				[set r = r - (z * v)] r = 2x -1 - 2(x+1) = -3
+  			[r != 0 and highest degree, d_r = 0, in r greater or equal to highest degree, d_v = 1, in v] NO
+		We are done! q = x^2 -x + 2
+Problem 1.
+
+(a) Rep Invariant for every RatNum r: ( r.denom >= 0 ):
+  Method or constructor that would have change: checkRep() has to modify to satisfy (r.demon >= 0),
+  RatNum(int n, int d) is more efficiency which remove gcd(int a, int b) to satisfy (r.demon >= 0),
+  and hashCode() should be implement gcd(int a, int b)to make it corrects and keeps the same rational
+  number which is less efficiency because gcd(int a, int b) has a while loop. Moreover, RatNum.toString()
+  is less efficiency because it must add gcd(int a, int b) has a while loop to output fractions in reduced form.
+
+(b) The statement of the form changes fail to meet the specifications of the methods because there is no evidence
+ to show that this is modified by method. Moreover, the statement of the form changes fail to meet the 
+ specifications of the RatNum class because the class whose instances cannot be modified (immutable), but the statement of 
+ the form changes make it mutable.
+ 
+(c) Because of "RatNum class is immutable class whose instances cannot be modified and all of the information
+    contained in each instance is provided when it is created and is fixed for the lifetime of the object." 
+    and RatNum's variables declared in final. Therefore, it is sufficient to call checkRep only at the end 
+    of the constructors to satisfy the invariant.
+
+
+Problem 2.
+
+(a) We just need to include calls to checkRep at the end of constructors because RatTerm class is immutable 
+    class whose instances (methods) cannot be modified (declared as final) and all of the information contained 
+    in each instance is provided when it is created and is fixed for the lifetime of the object.
+    Therefore, it is sufficient to call checkRep only at the end of the constructors to satisfy the invariant.
+
+(b) Function isZero() should be changed and (RatTerm(this.coeff.mul(arg.coeff), this.expt + arg.expt);) with all of addition,
+    subtraction, multiplication, and division which are more complexity in term of code clarification because we use more than two method to
+    determine the result. Moreover, toString() should check iszero() first after checking e = 1 then append to the output which
+    make the process more complexity.
+
+
+(c) The constructor should check all of coeff and expt with isNaN() to pass in instead of NaN*x^74 (NaN*x^expt) would eliminated
+    in the data list. Therefore, computing addition, subtraction, multiplication, and division are more easier.
+
+
+Problem 5. MY favorite polynomial equations:
+4*x^9
+96*x^17+12*x^9+16*x^5-36
+-672*x^26-56*x^18-112*x^14+252*x^9
+-24*x^17-2*x^9-4*x^5+8
+1152*x^34+192*x^26+384*x^22+8*x^18-768*x^17+32*x^14+32*x^10-64*x^9-128*x^5+128

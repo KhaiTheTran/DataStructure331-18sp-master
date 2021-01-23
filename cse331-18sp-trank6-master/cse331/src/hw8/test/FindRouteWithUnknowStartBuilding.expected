@@ -1,0 +1,12 @@
+Menu:
+r to find a route
+b to see a list of all buildings
+q to quit
+
+Enter an option ('m' to see the menu): # Test Unknown Start Building
+# Print Unknown building: [building name]
+
+# Start program
+Abbreviated name of starting building: Abbreviated name of ending building: Unknown building: QFC
+Enter an option ('m' to see the menu):
+# Terminate Program

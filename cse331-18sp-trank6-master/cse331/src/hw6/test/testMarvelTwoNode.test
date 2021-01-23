@@ -1,0 +1,14 @@
+# Test BFS with an two nodes file
+
+#Load graph
+LoadGraph nodetwo nodetwo.tsv
+
+# check graph load
+ListNodes nodetwo
+ListChildren nodetwo 3-D_MAN/CHARLES_CHAN
+ListChildren nodetwo HUMAN_ROBOT
+
+# Test BFS
+FindPath nodetwo 3-D_MAN/CHARLES_CHAN 3-D_MAN/CHARLES_CHAN
+FindPath nodetwo 3-D_MAN/CHARLES_CHAN HUMAN_ROBOT
+FindPath nodetwo HUMAN_ROBOT 3-D_MAN/CHARLES_CHAN

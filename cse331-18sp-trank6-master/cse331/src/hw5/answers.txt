@@ -1,0 +1,102 @@
+CSE 331 Homework 5.  Answers to Written questions.
+Edit this file to supply your answers.
+
+Name:  <Khai Tran>
+
+Problem 1. (Written exercises)
+
+(a) 
+IntQueue1:
+The representation invariant:
+
+ 	An IntQueue is a linked list of integer with the entries is not null
+ which mean the IntQueue is entries has no null elements.
+ 
+The abstraction function:
+          
+  Abstraction Function is IntQueue<Integer> where:
+                     
+                         IntQueue = entries = queue=[] if there is no entry
+                         
+                         IntQueue = entries = queue=[n1, n2, ..., n_k] : n_k+1 is the result of enqueing n_k+1
+ at the end of the queue.
+                         with k is the number of entry in entries
+
+IntQueue2:
+The representation invariant:
+          size of item >= 0 and entries is not null
+          front >= 0 and front <= entries.length-1        
+The abstraction function:
+	Abstraction Function is IntQueue<Integer> where:
+	entries = queue=[n1, n2, ..., n_k] : front = x, size = y
+		IntQueue = queue=[] if there is no entry (size == 0)
+		IntQueue = queue=[n_(i+1), ..., n_(i+y)] if front(i) + size(y) <= entries.length-1
+		IntQueue = queue=[n_(i+1), ..., n_k, n1, n2, ..., n_(k-1)] if front(i) + size(y) <= entries.length-1
+(b) Which snapshots are equivalent to each other at the abstract level?
+	IntQueue_a = [1, 2]
+	IntQueue_b = [2, 3, 4]
+	IntQueue_c = [1, 2, 3]
+	IntQueue_d = [1, 2]
+	IntQueue_e = [1, 2, 3, 4]
+	IntQueue_f = [1, 2, 3]
+	IntQueue_g = [1, 2]
+	IntQueue_h = [2, 3, 4]
+	From above we know:
+	IntQueue_a, IntQueue_d, IntQueue_g are equivalent.
+	IntQueue_b, IntQueue_h are equivalent.
+	IntQueue_c, IntQueue_f are equivalent.
+	
+(c) Below are signatures for various methods and constructors.
+1. public int solveEquations(int x, int y, int z)
+
+It does not possibly expose the representation because this method solve an equation,
+and should get and return mutable objects, 
+but it only get and return primitive data type.
+
+2. public String[] decode(boolean slowly)
+
+It possibly exposes the representation because the return type is array String[] and is mutable object.
+
+3. private Date myBirthday()
+
+If return Date is a copy of the original value and mutable object, it possibly exposes the representation 
+
+4. public String toString()
+
+It does not possibly exposes the representation because the return type String is immutable.
+
+5. public Iterator<Integer> elements()
+
+If the return type Iterator has remove() method and references to the original collection,
+it possibly exposes the representation because the user can modify
+the Integer value by remove() in the collection while iterating its elements.
+
+6. public Deck(List<Card> cards)
+
+If the method modifies only in the original List<Card> which means there is no copy from it,
+this method possibly exposes the representation because user can modify List<Card> and 
+hurt the rep invariant of the method. 
+
+Problem 2.  (Graph interface/operations):
+To modify the graph I have: removeEdge(), addEdge(), addNode(), and all those functions
+necessary to create the graph.
+To get the graph information: checkRep(), toString (),  countEdge(), childNode(), 
+isEmpty, size(), getNode() which all of that function allow for me to add, delete,
+get information or check duplicate data with hasNode() when I need.
+
+Problem 3.  (Testing strategy)
+I use "0, 1, 2" testing strategy which tells in the specification change the order by a lot of combinations.
+I go from empty graph to one node, two node, respectively with no edge, one edges, two edge and more for 
+testing different cases. I think my test is very clear because I go step by step from small data to more data.
+It help me to understand more about the homework. I have a lot of problems when running the test I have to go back
+the code to figure out the test wrong or the code was wrong. I just keep following the "Testing strategy" and fix the
+code.
+
+Problem 4.  (Representation)
+I think my graph is a collection of edges because the edge is stored in the HashSet which is inside a Map so we can store
+data with a node with an edge together with one key as a collection of edges.
+The homework data structure is as an adjacency list, in which each node is associated with a list of its outgoing edges
+because I use Map to store the nodes and use HashSet to store the edges when it go together. It helps we manage data easier.
+The advantages of using collections of edges is very fast with big O(1) to add a new edge. There are many advantages 
+as an adjacency matrix with big O(1) very fast to add or remove an edge because just go to the node in Map and add or delete
+an edge. Moreover, we can combine with TreeSet and TreeSet, HashSet to sort data in order with Collections comparable.

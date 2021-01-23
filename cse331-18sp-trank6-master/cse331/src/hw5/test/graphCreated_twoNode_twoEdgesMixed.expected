@@ -1,0 +1,18 @@
+# Test graphCreated_twoNode_twoEdgesMixed
+
+# Create a graph
+created graph graphCreated_twoNode_twoEdgesMixed
+
+# Add two nodes
+added node xx to graphCreated_twoNode_twoEdgesMixed
+added node yy to graphCreated_twoNode_twoEdgesMixed
+
+# Add two edges
+added edge xxyy from xx to yy in graphCreated_twoNode_twoEdgesMixed
+added edge yyxx from yy to xx in graphCreated_twoNode_twoEdgesMixed
+
+# Print the nodes in the graph and the outgoing edges from xx,
+# and outgoing from yy
+graphCreated_twoNode_twoEdgesMixed contains: xx yy
+the children of xx in graphCreated_twoNode_twoEdgesMixed are: yy(xxyy)
+the children of yy in graphCreated_twoNode_twoEdgesMixed are: xx(yyxx)

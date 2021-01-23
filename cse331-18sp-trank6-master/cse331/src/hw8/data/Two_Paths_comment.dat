@@ -1,0 +1,8 @@
+# paths from second building
+5,6
+# to first building
+	9,9: 7
+# paths from first building
+9,9
+# to second building
+	5,6: 7

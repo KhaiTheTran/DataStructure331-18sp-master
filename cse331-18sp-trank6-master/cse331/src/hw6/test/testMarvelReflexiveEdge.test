@@ -1,0 +1,28 @@
+# Test load graph eliminate reflexive node
+
+#Load graph
+LoadGraph marveNodeReflexive marveNodeReflexive.tsv
+
+# check graph load
+ListNodes marveNodeReflexive
+ListChildren marveNodeReflexive x
+ListChildren marveNodeReflexive y
+ListChildren marveNodeReflexive z
+
+# Test BFS shortest path from x to z
+FindPath marveNodeReflexive x z
+
+# Test BFS shortest path from z to x
+FindPath marveNodeReflexive z x
+
+# Test BFS shortest path from x to y
+FindPath marveNodeReflexive x y
+
+# Test BFS shortest path from y to x
+FindPath marveNodeReflexive y x
+
+# Test BFS shortest path from y to z
+FindPath marveNodeReflexive y z
+
+# Test BFS shortest path from z to y
+FindPath marveNodeReflexive z y

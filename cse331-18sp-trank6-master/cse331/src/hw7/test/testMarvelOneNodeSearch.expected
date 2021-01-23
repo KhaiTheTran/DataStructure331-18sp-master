@@ -1,0 +1,14 @@
+# Test Dijkstra's algorithm with an one node file
+
+#Load graph
+loaded graph nodeone
+
+# check graph name
+nodeone contains: KILLRAVEN/JONATHAN R
+the children of KILLRAVEN/JONATHAN R in nodeone are:
+
+# Test Dijkstra's algorithm
+path from KILLRAVEN/JONATHAN R to KILLRAVEN/JONATHAN R:
+total cost: 0.000
+unknown character node a
+unknown character node b

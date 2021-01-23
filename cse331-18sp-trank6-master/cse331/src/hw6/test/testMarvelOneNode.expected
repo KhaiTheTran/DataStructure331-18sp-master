@@ -1,0 +1,13 @@
+# Test BFS with an one node file
+
+#Load graph
+loaded graph nodeone
+
+# check graph name
+nodeone contains: KILLRAVEN/JONATHAN R
+the children of KILLRAVEN/JONATHAN R in nodeone are:
+
+# Test BFS
+path from KILLRAVEN/JONATHAN R to KILLRAVEN/JONATHAN R:
+unknown character node a
+unknown character node b

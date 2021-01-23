@@ -1,0 +1,22 @@
+# Test graphCreated_twoNode_moreEdges_alphaOrder
+# Test with two nodes and five edges in backward order
+
+# Create a graph
+CreateGraph graphCreated_twoNode_moreEdges_alphaOrder
+
+# Add two nodes in backward order
+AddNode graphCreated_twoNode_moreEdges_alphaOrder yy
+AddNode graphCreated_twoNode_moreEdges_alphaOrder xx
+
+# Add five edges with backward order
+AddEdge graphCreated_twoNode_moreEdges_alphaOrder yy yy yyyy
+AddEdge graphCreated_twoNode_moreEdges_alphaOrder xx yy xxyy9
+AddEdge graphCreated_twoNode_moreEdges_alphaOrder xx yy xxyy99
+AddEdge graphCreated_twoNode_moreEdges_alphaOrder yy xx yyxx
+AddEdge graphCreated_twoNode_moreEdges_alphaOrder xx xx xxxx
+
+# Print the nodes in the graph and the outgoing edges from xx,
+# and outgoing from yy
+ListNodes graphCreated_twoNode_moreEdges_alphaOrder
+ListChildren graphCreated_twoNode_moreEdges_alphaOrder xx
+ListChildren graphCreated_twoNode_moreEdges_alphaOrder yy

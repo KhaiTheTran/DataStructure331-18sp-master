@@ -1,0 +1,15 @@
+Menu:
+r to find a route
+b to see a list of all buildings
+q to quit
+
+Enter an option ('m' to see the menu): # Verify that the program finds and correctly outputs the shortest path from
+# CSE to PAB.
+Unknown option
+
+Enter an option ('m' to see the menu): Unknown option
+
+Enter an option ('m' to see the menu): Unknown option
+
+Enter an option ('m' to see the menu):
+# All of your test scripts should end with q to terminate the program.

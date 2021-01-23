@@ -1,0 +1,46 @@
+# Test load graph and Dijkstra's algorithm with bridge label data
+
+#Load graph
+loaded graph testmarvelone
+
+# check graph load
+testmarvelone contains: AA BB CC DD EE FF GG XX YY
+the children of AA in testmarvelone are: BB1.000
+the children of BB in testmarvelone are: AA1.000
+the children of CC in testmarvelone are: DD1.000 EE1.000
+the children of DD in testmarvelone are: CC1.000 EE1.000
+the children of EE in testmarvelone are: CC1.000 DD1.000
+the children of FF in testmarvelone are: GG1.000
+the children of GG in testmarvelone are: FF1.000
+the children of YY in testmarvelone are:
+the children of XX in testmarvelone are:
+
+
+# Test the order of BFS
+# Test Dijkstra's algorithm shortest path from AA to BB
+path from AA to BB:
+AA to BB with weight 1.000
+total cost: 1.000
+
+# Test Dijkstra's algorithm shortest path from BB to AA
+path from BB to AA:
+BB to AA with weight 1.000
+total cost: 1.000
+
+# Test Dijkstra's algorithm shortest path from CC to EE
+path from CC to EE:
+CC to EE with weight 1.000
+total cost: 1.000
+
+# Test Dijkstra's algorithm shortest path from EE to CC
+path from EE to CC:
+EE to CC with weight 1.000
+total cost: 1.000
+
+# Test Dijkstra's algorithm shortest path from GG to AA
+path from GG to AA:
+no path found
+
+# Test Dijkstra's algorithm shortest path from AA to GG
+path from AA to GG:
+no path found

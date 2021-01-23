@@ -1,0 +1,13 @@
+# Test BFS with an one node file
+
+#Load graph
+LoadGraph nodeone nodeone.tsv
+
+# check graph name
+ListNodes nodeone
+ListChildren nodeone KILLRAVEN/JONATHAN_R
+
+# Test BFS
+FindPath nodeone KILLRAVEN/JONATHAN_R KILLRAVEN/JONATHAN_R
+FindPath nodeone KILLRAVEN/JONATHAN_R node_a
+FindPath nodeone node_b KILLRAVEN/JONATHAN_R

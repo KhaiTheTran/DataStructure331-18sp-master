@@ -1,0 +1,17 @@
+# Test Dijkstra's algorithm with an two nodes file
+
+#Load graph
+loaded graph nodetwo
+
+# check graph load
+nodetwo contains: 3-D MAN/CHARLES CHAN HUMAN ROBOT
+the children of 3-D MAN/CHARLES CHAN in nodetwo are:
+the children of HUMAN ROBOT in nodetwo are:
+
+# Test Dijkstra's algorithm
+path from 3-D MAN/CHARLES CHAN to 3-D MAN/CHARLES CHAN:
+total cost: 0.000
+path from 3-D MAN/CHARLES CHAN to HUMAN ROBOT:
+no path found
+path from HUMAN ROBOT to 3-D MAN/CHARLES CHAN:
+no path found

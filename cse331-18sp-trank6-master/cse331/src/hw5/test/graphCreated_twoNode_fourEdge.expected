@@ -1,0 +1,20 @@
+# Test graphCreated_twoNode_fourEdge
+
+# Create a graph
+created graph graphCreated_twoNode_fourEdge
+
+# Add two nodes
+added node xx to graphCreated_twoNode_fourEdge
+added node yy to graphCreated_twoNode_fourEdge
+
+# Add four edges
+added edge xxxx from xx to xx in graphCreated_twoNode_fourEdge
+added edge xxyy from xx to yy in graphCreated_twoNode_fourEdge
+added edge yyxx from yy to xx in graphCreated_twoNode_fourEdge
+added edge yyyy from yy to yy in graphCreated_twoNode_fourEdge
+
+# Print the nodes in the graph and the outgoing edges from xx,
+# and outgoing edge from yy
+graphCreated_twoNode_fourEdge contains: xx yy
+the children of xx in graphCreated_twoNode_fourEdge are: xx(xxxx) yy(xxyy)
+the children of yy in graphCreated_twoNode_fourEdge are: xx(yyxx) yy(yyyy)

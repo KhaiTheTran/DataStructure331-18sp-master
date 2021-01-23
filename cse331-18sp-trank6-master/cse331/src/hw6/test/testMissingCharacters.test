@@ -1,0 +1,11 @@
+# Test test Missing Characters
+
+#Load graph
+LoadGraph marveNodeComplexGraph marveNodeComplexGraph.tsv
+
+# Find graph
+FindPath marveNodeComplexGraph A B
+
+FindPath marveNodeComplexGraph LIBRA/GUSTAV B
+
+FindPath marveNodeComplexGraph A BRANDT

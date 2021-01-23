@@ -1,0 +1,37 @@
+# Test load graph and BFS
+
+#Load graph
+loaded graph marveNodeComplexGraph
+
+# check graph load
+marveNodeComplexGraph contains: BRANDT JONES, RICHARD MILHO LIBRA/GUSTAV
+the children of LIBRA/GUSTAV in marveNodeComplexGraph are: JONES, RICHARD MILHO(AVF 1) JONES, RICHARD MILHO(AVF 2)
+the children of BRANDT in marveNodeComplexGraph are: JONES, RICHARD MILHO(AVF 3) JONES, RICHARD MILHO(AVF 4)
+the children of JONES, RICHARD MILHO in marveNodeComplexGraph are: BRANDT(AVF 3) BRANDT(AVF 4) LIBRA/GUSTAV(AVF 1) LIBRA/GUSTAV(AVF 2)
+
+# Test the order of BFS
+# Test BFS shortest path from LIBRA/GUSTAV to BRANDT
+path from LIBRA/GUSTAV to BRANDT:
+LIBRA/GUSTAV to JONES, RICHARD MILHO via AVF 1
+JONES, RICHARD MILHO to BRANDT via AVF 3
+
+# Test BFS shortest path from BRANDT to LIBRA/GUSTAV
+path from BRANDT to LIBRA/GUSTAV:
+BRANDT to JONES, RICHARD MILHO via AVF 3
+JONES, RICHARD MILHO to LIBRA/GUSTAV via AVF 1
+
+# Test BFS shortest path from BRANDT to JONES,_RICHARD_MILHO
+path from BRANDT to JONES, RICHARD MILHO:
+BRANDT to JONES, RICHARD MILHO via AVF 3
+
+# Test BFS shortest path from JONES,_RICHARD_MILHO to BRANDT
+path from JONES, RICHARD MILHO to BRANDT:
+JONES, RICHARD MILHO to BRANDT via AVF 3
+
+# Test BFS shortest path from JONES,_RICHARD_MILHO to LIBRA/GUSTAV
+path from JONES, RICHARD MILHO to LIBRA/GUSTAV:
+JONES, RICHARD MILHO to LIBRA/GUSTAV via AVF 1
+
+# Test BFS shortest path from LIBRA/GUSTAV to JONES,_RICHARD_MILHO
+path from LIBRA/GUSTAV to JONES, RICHARD MILHO:
+LIBRA/GUSTAV to JONES, RICHARD MILHO via AVF 1

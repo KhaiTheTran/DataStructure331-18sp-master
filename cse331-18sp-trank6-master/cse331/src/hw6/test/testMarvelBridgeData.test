@@ -1,0 +1,36 @@
+# Test load graph and BFS with bridge label data
+
+#Load graph
+LoadGraph testmarvelone testmarvelone.tsv
+
+# check graph load
+ListNodes testmarvelone
+ListChildren testmarvelone AA
+ListChildren testmarvelone BB
+ListChildren testmarvelone CC
+ListChildren testmarvelone DD
+ListChildren testmarvelone EE
+ListChildren testmarvelone FF
+ListChildren testmarvelone GG
+ListChildren testmarvelone YY
+ListChildren testmarvelone XX
+
+
+# Test the order of BFS
+# Test BFS shortest path from AA to BB
+FindPath testmarvelone AA BB
+
+# Test BFS shortest path from BB to AA
+FindPath testmarvelone BB AA
+
+# Test BFS shortest path from CC to EE
+FindPath testmarvelone CC EE
+
+# Test BFS shortest path from EE to CC
+FindPath testmarvelone EE CC
+
+# Test BFS shortest path from GG to AA
+FindPath testmarvelone GG AA
+
+# Test BFS shortest path from AA to GG
+FindPath testmarvelone AA GG

@@ -1,0 +1,14 @@
+# Test graphCreated_twoNode_alphaOrder
+
+# Create a graph
+CreateGraph graphCreated_twoNode_alphaOrder
+
+# Add two nodes in backward order
+AddNode graphCreated_twoNode_alphaOrder yy
+AddNode graphCreated_twoNode_alphaOrder xx
+
+# Print the nodes in the graph and the outgoing edges from xx,
+# and outgoing from yy
+ListNodes graphCreated_twoNode_alphaOrder
+ListChildren graphCreated_twoNode_alphaOrder xx
+ListChildren graphCreated_twoNode_alphaOrder yy

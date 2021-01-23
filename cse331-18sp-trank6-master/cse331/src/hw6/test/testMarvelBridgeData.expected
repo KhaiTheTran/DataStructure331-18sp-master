@@ -1,0 +1,42 @@
+# Test load graph and BFS with bridge label data
+
+#Load graph
+loaded graph testmarvelone
+
+# check graph load
+testmarvelone contains: AA BB CC DD EE FF GG XX YY
+the children of AA in testmarvelone are: BB(marvel1)
+the children of BB in testmarvelone are: AA(marvel1)
+the children of CC in testmarvelone are: DD(marvel3) EE(marvel3)
+the children of DD in testmarvelone are: CC(marvel3) EE(marvel3)
+the children of EE in testmarvelone are: CC(marvel3) DD(marvel3)
+the children of FF in testmarvelone are: GG(marvel9)
+the children of GG in testmarvelone are: FF(marvel9)
+the children of YY in testmarvelone are:
+the children of XX in testmarvelone are:
+
+
+# Test the order of BFS
+# Test BFS shortest path from AA to BB
+path from AA to BB:
+AA to BB via marvel1
+
+# Test BFS shortest path from BB to AA
+path from BB to AA:
+BB to AA via marvel1
+
+# Test BFS shortest path from CC to EE
+path from CC to EE:
+CC to EE via marvel3
+
+# Test BFS shortest path from EE to CC
+path from EE to CC:
+EE to CC via marvel3
+
+# Test BFS shortest path from GG to AA
+path from GG to AA:
+no path found
+
+# Test BFS shortest path from AA to GG
+path from AA to GG:
+no path found

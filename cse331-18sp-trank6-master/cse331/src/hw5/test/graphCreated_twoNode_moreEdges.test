@@ -1,0 +1,21 @@
+# Test graphCreated_twoNode_moreEdges
+
+# Create a graph
+CreateGraph graphCreated_twoNode_moreEdges
+
+# Add two nodes
+AddNode graphCreated_twoNode_moreEdges xx
+AddNode graphCreated_twoNode_moreEdges yy
+
+# Add five edges
+AddEdge graphCreated_twoNode_moreEdges xx xx xxxx
+AddEdge graphCreated_twoNode_moreEdges xx yy xxyy9
+AddEdge graphCreated_twoNode_moreEdges xx yy xxyy99
+AddEdge graphCreated_twoNode_moreEdges yy xx yyxx
+AddEdge graphCreated_twoNode_moreEdges yy yy yyyy
+
+# Print the nodes in the graph and the outgoing edges from xx,
+# and outgoing from yy
+ListNodes graphCreated_twoNode_moreEdges
+ListChildren graphCreated_twoNode_moreEdges xx
+ListChildren graphCreated_twoNode_moreEdges yy

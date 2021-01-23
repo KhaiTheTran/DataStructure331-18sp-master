@@ -1,0 +1,45 @@
+CSE 331 Homework 3.  Answers to Written questions.
+Edit this file to supply your answers.
+
+Name:  <Khai Tran>
+
+Problem 6.
+
+(a) Fibonacci fail the testThrowsIllegalArgumentException test because of testing fail with BaseCase because 
+it should return 1 but it return 0. I fixed in Fibonacci class in getFibTerm(int n) method at the base case 
+from "if( n <= 0)" became "if( n < 0)".
+
+(b) Fibonacci fail the testBaseCase test because the first index of the sequence is 0, but "if (n <= 0)" make it 
+fail the testBaseCase test which getFibTerm(int n) method should not throw exception with "n = 0".
+I fixed in Fibonacci class in getFibTerm(int n) method at the base case from "if( n <= 0)" became "if( n < 0)".
+
+(c) Fibonacci fail the testInductiveCase test because getFibTerm(int n) method returned wrong answer which 
+it should return 2, but it returned 1. I fixed in Fibonacci class in getFibTerm(int n) method at the
+ InductiveCase from "else {( n <= 0)" became "else{( n < 0)"and "return getFibTerm(n - 1) - getFibTerm(n - 2)"
+  became "getFibTerm(n - 1) + getFibTerm(n - 2)".
+
+
+Problem 7. 
+
+<a. Warm-Up:
+In Ball.java the getVolume() method did not return the value "volume".
+I fixed in Ball.java in "Ball(double volume)" method which "volume = volume" became "this.volume = volume",
+and in " getVolume()" method which "return 0;" became "return this.volume".
+
+b. I think the second approach is better: "2. Keep track of the total volume of the Balls in BallContainer
+ whenever Balls are added and removed." is better where the total volume of the Balls is already to return 
+ immediately because which a large number of balls that the return value is immediately while the other 
+ approaches using a loop to read entire of a large data(100,000,000 balls) which costs a lot of time to
+  get the return value.
+
+c. Implementing a Box:
+  1. I think implement getBallsFromSmallest() by using a while loop to copy all balls in the Box to ArrayList,
+  and use Collections to sort the ArrayList with Comparator in increasing order, and then return 
+  ArrayList under Iterator in increasing order. 
+  There is another way to implement getBallsFromSmallest() with TreeSet of Comparator which it helps to sort the Ball objects 
+  increasing order when I used a while loop to read elements from the Iterator of the Box and copy them to the new TreeSet and sort in 
+  increasing order with help of Comparator. After copying all elements of the Iterator of the Box to TreeSet of Comparator, it will 
+  return the TreeSet of Iterator in increasing order.
+  2. I think the first way with ArrayList is the best because the TreeSet is slower than ArrayList because 
+  TreeSet structure need more memory and memory access indirectly that makes TreeSet slower.
+>

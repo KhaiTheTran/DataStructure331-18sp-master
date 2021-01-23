@@ -1,0 +1,7 @@
+# Tests initial graph.
+
+# Create a graph
+created graph Creategraph
+
+# Print the nodes in the graph
+Creategraph contains:

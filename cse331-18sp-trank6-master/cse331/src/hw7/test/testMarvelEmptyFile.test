@@ -1,0 +1,7 @@
+# Test Dijkstra's algorithm with an empty file
+
+LoadGraph marvelNull marvelNull.tsv
+
+ListNodes marvelNull
+
+FindPath marvelNull node_a node_b
